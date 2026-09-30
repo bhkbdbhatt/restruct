@@ -1,0 +1,19 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[project]
+name = "restruct"
+version = "0.1.0"
+description = "Safely restructure messy codebases while preserving git history."
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "typer>=0.9.0",
+    "gitpython>=3.1.40",
+    "rich>=13.0.0",
+    "pydantic>=2.0.0"
+]
+
+[project.scripts]
+restruct = "restruct.cli:app"
